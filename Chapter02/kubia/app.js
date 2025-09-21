@@ -6,7 +6,7 @@ console.log("Kubia server starting...");
 var handler = function(request, response) {
   console.log("Received request from " + request.connection.remoteAddress);
   response.writeHead(200);
-  response.end("You've hit " + os.hostname() + "\n");
+  response.end("Hello from Kubia v0.2, running on " + os.hostname() + "\n");
 };
 
 var www = http.createServer(handler);
